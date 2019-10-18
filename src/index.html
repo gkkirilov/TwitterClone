@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Twitter Clone</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<!-- <img class="img-fluid" src="https://picsum.photos/600/" alt=""> -->
+
+<body>
+  <div class="container-fluid">
+    <div class="row mt-lg-0">
+      <div class="col-2 col-sm-1 col-lg-4 pl-0">
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-lg-2 mb-3 ">
+            <button class="btn btn-link btn-pill " type="button">
+              <i class="fab fa-twitter fa-lg menuIcon" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-lg-2 mb-3 ">
+            <button class="btn btn-link btn-pill " type="button">
+              <i class="fa fa-home fa-lg mr-3 menuIcon" aria-hidden="true"></i>
+              <span class="h5 d-none d-lg-inline">Home</span>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-lg-2 mb-3  ">
+            <button class="btn btn-link btn-pill " type="button">
+              <i class="fa fa-hashtag fa-lg mr-3 menuIcon" aria-hidden="true"></i>
+              <span class="h5 d-none d-lg-inline">Explore</span>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-lg-2 mb-3 ">
+            <button class="btn btn-link btn-pill " type="button">
+              <i class="far fa-bell fa-lg mr-3 menuIcon" aria-hidden="true"></i>
+              <span class="h5 d-none d-lg-inline">Notifications</span>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-lg-2 mb-3 ">
+            <button class="btn btn-link btn-pill " type="button">
+              <i class="far fa-envelope fa-lg mr-3 menuIcon" aria-hidden="true"></i>
+              <span class="h5 d-none d-lg-inline">Messages</span>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-lg-2 mb-3 ">
+            <button class="btn btn-link btn-pill " type="button">
+              <i class="far fa-bookmark fa-lg mr-3 menuIcon" aria-hidden="true"></i>
+              <span class="h5 d-none d-lg-inline">Bookmarks</span>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-lg-2 mb-3 ">
+            <button class="btn btn-link btn-pill " type="button">
+              <i class="far fa-list-alt fa-lg mr-3 menuIcon" aria-hidden="true"></i>
+              <span class="h5 d-none d-lg-inline">Lists</span>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end">
+          <div class="col-6 mb-lg-2 mb-3">
+            <button class="btn btn-link btn-pill" type="button">
+              <img class="image-fluid rounded-circle mr-3 menuIcon profileIcon"
+                src="https://pbs.twimg.com/profile_images/1100459649592160257/w7BTaEzB_normal.jpg" alt="">
+              <span class="h5 d-none d-lg-inline">Profile</span>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-3 ">
+            <button class="btn btn-link btn-pill " type="button">
+              <i class="fas fa-ellipsis-h fa-lg mr-3 menuIcon" aria-hidden="true"></i>
+              <span class="h5 d-none d-lg-inline">More</span>
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end pl-2">
+          <div class="col-6 mb-lg-2 mb-3 ">
+            <button class="btn btn-primary btn-block tweetBtn d-none d-lg-block btn-lg" type="button">
+              Tweet
+            </button>
+            <button class="btn btn-link rounded-circle d-lg-none" type="button">
+              <i class="fas fa-feather fa-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 col-lg-4 border">
+        <div class="row border-bottom d-md-block">
+          <div class="col mt-2 text-secondary">
+            <div class="h4 font-weight-bold">Home</div>
+          </div>
+          <div class="col-auto mt-1 p-0">
+            <button class="btn btn-link" type="button">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row my-2 d-none d-md-block">
+          <div>
+            <img class="image-fluid rounded-circle ml-3"
+              src="https://pbs.twimg.com/profile_images/1100459649592160257/w7BTaEzB_normal.jpg" alt="">
+          </div>
+          <div class="col pl-0">
+            <textarea class=" form-control border-0" id="tweetArea" placeholder="What's happening?" rows="1"></textarea>
+            <div class="row justify-content-between align-center">
+              <div class="ml-3">
+                <button class="btn btn-link pr-0" type="button">
+                  <i class="fa fa-picture-o fa-lg" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-link pr-0" type="button">
+                  <i class="fa fa-images fa-lg" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-link pr-0" type="button">
+                  <i class="fa fa-bar-chart fa-lg" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-link pr-0" type="button">
+                  <i class="fa fa-smile-o fa-lg" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="mt-2 float-right">
+                <button class="btn btn-link text-secondary pr-0" type="button">
+                  <i class="fa fa-circle-o border-right pr-3 fa-2x " aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-link " type="button">
+                  <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-primary roundBtn mr-3" type="button">
+                  Tweet
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row line"></div>
+        <div class="row my-2">
+          <div>
+            <img class="image-fluid rounded-circle ml-3" src="https://picsum.photos/40/" alt="">
+          </div>
+          <div class="col">
+            <div class="row ml-2">
+              <div class="h7 font-weight-bold">GKKirilov</div>
+              <span class="ml-2">@gkkirilov</span>
+              <span class="pl-1">· 8 hours</span>
+            </div>
+            <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni doloremque
+              unde, sequi
+              ipsum vero, aliquam sint obcaecati nihil placeat quam recusandae porro repellat ducimus mollitia magnam
+              aperiam exercitationem velit.</div>
+            <div class="row justify-content-between mx-1">
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">20</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">1</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">102</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div>
+            <img class="image-fluid rounded-circle ml-3" src="https://picsum.photos/40/" alt="">
+          </div>
+          <div class="col">
+            <div class="row ml-2">
+              <div class="h7 font-weight-bold">GKKirilov</div>
+              <span class="ml-2">@gkkirilov</span>
+              <span class="pl-1">· 8 hours</span>
+            </div>
+            <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni doloremque
+              unde, sequi
+              ipsum vero, aliquam sint obcaecati nihil placeat quam recusandae porro repellat ducimus mollitia magnam
+              aperiam exercitationem velit.</div>
+            <div class="row justify-content-between mx-1">
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">20</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">1</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">102</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div>
+            <img class="image-fluid rounded-circle ml-3" src="https://picsum.photos/40/" alt="">
+          </div>
+          <div class="col">
+            <div class="row ml-2">
+              <div class="h7 font-weight-bold">GKKirilov</div>
+              <span class="ml-2">@gkkirilov</span>
+              <span class="pl-1">· 8 hours</span>
+            </div>
+            <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni doloremque
+              unde, sequi
+              ipsum vero, aliquam sint obcaecati nihil placeat quam recusandae porro repellat ducimus mollitia magnam
+              aperiam exercitationem velit.</div>
+            <div class="row justify-content-between mx-1">
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">20</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">1</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">102</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div>
+            <img class="image-fluid rounded-circle ml-3" src="https://picsum.photos/40/" alt="">
+          </div>
+          <div class="col">
+            <div class="row ml-2">
+              <div class="h7 font-weight-bold">GKKirilov</div>
+              <span class="ml-2">@gkkirilov</span>
+              <span class="pl-1">· 8 hours</span>
+            </div>
+            <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni doloremque
+              unde, sequi
+              ipsum vero, aliquam sint obcaecati nihil placeat quam recusandae porro repellat ducimus mollitia magnam
+              aperiam exercitationem velit.</div>
+            <div class="row justify-content-between mx-1">
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">20</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">1</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">102</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div>
+            <img class="image-fluid rounded-circle ml-3" src="https://picsum.photos/40/" alt="">
+          </div>
+          <div class="col">
+            <div class="row ml-2">
+              <div class="h7 font-weight-bold">GKKirilov</div>
+              <span class="ml-2">@gkkirilov</span>
+              <span class="pl-1">· 8 hours</span>
+            </div>
+            <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni doloremque
+              unde, sequi
+              ipsum vero, aliquam sint obcaecati nihil placeat quam recusandae porro repellat ducimus mollitia magnam
+              aperiam exercitationem velit.</div>
+            <div class="row justify-content-between mx-1">
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">20</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">1</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">102</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div>
+            <img class="image-fluid rounded-circle ml-3" src="https://picsum.photos/40/" alt="">
+          </div>
+          <div class="col">
+            <div class="row ml-2">
+              <div class="h7 font-weight-bold">GKKirilov</div>
+              <span class="ml-2">@gkkirilov</span>
+              <span class="pl-1">· 8 hours</span>
+            </div>
+            <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni doloremque
+              unde, sequi
+              ipsum vero, aliquam sint obcaecati nihil placeat quam recusandae porro repellat ducimus mollitia magnam
+              aperiam exercitationem velit.</div>
+            <div class="row justify-content-between mx-1">
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">20</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">1</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">102</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div>
+            <img class="image-fluid rounded-circle ml-3" src="https://picsum.photos/40/" alt="">
+          </div>
+          <div class="col">
+            <div class="row ml-2">
+              <div class="h7 font-weight-bold">GKKirilov</div>
+              <span class="ml-2">@gkkirilov</span>
+              <span class="pl-1">· 8 hours</span>
+            </div>
+            <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni doloremque
+              unde, sequi
+              ipsum vero, aliquam sint obcaecati nihil placeat quam recusandae porro repellat ducimus mollitia magnam
+              aperiam exercitationem velit.</div>
+            <div class="row justify-content-between mx-1">
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">20</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">1</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">102</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div>
+            <img class="image-fluid rounded-circle ml-3" src="https://picsum.photos/40/" alt="">
+          </div>
+          <div class="col">
+            <div class="row ml-2">
+              <div class="h7 font-weight-bold">GKKirilov</div>
+              <span class="ml-2">@gkkirilov</span>
+              <span class="pl-1">· 8 hours</span>
+            </div>
+            <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni doloremque
+              unde, sequi
+              ipsum vero, aliquam sint obcaecati nihil placeat quam recusandae porro repellat ducimus mollitia magnam
+              aperiam exercitationem velit.</div>
+            <div class="row justify-content-between mx-1">
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-comment-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">20</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-retweet fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">1</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
+                <span class="h6 ml-1">102</span>
+              </button>
+              <button class="btn btn-link" type="button">
+                <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 mt-2 d-none d-md-block">
+        <div class="row">
+          <div class="col-10">
+            <div class="form-group">
+              <div class="input-group search">
+                <div class="input-group-prepend">
+                  <span class="input-group-text searchPrepend " id="my-addon"><i class="fa fa-search"
+                      aria-hidden="true"></i></span>
+                </div>
+                <input id="search" class="form-control border-left-0" type="text" name="search"
+                  placeholder="Search Twitter">
+              </div>
+            </div>
+            <div class="card trending border-0">
+              <div class="card-body pt-2 text-dark">
+                <div class="row justify-content-between border-bottom">
+                  <div class="h4 col align-middle font-weight-bold">Trends for you</div>
+                  <button class="btn btn-link col-auto py-0" type="button">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="row mt-1 justify-content-between border-bottom">
+                  <div class="h5 font-weight-bold col align-middle">#makeitright</div>
+                </div>
+                <div class="row justify-content-between border-bottom">
+                  <div class="h5 font-weight-bold col align-middle">climateChange</div>
+                </div>
+                <div class="row justify-content-between border-bottom">
+                  <div class="h5 font-weight-bold col align-middle">Christmas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://kit.fontawesome.com/1c1bcdc658.js" crossorigin="anonymous"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+</html>

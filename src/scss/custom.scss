@@ -1,0 +1,81 @@
+$theme-colors: ("primary": #3f48cc);
+
+$body-bg: #f8f9ff;
+$body-bg-darker: #eaedfd;
+
+// @import 'custom';
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+
+@font-face {
+  font-family: ProductSansRegular;
+  src: url('../fonts/ProductSansRegular.ttf');
+}
+
+$enable-gradients: true;
+
+body {
+  font-family: ProductSansRegular !important;
+  // background-color: rgb(21, 32, 43);
+}
+
+.br {
+  background-color: red;
+}
+
+.bb {
+  background-color: blue;
+}
+
+.bi {
+  background-color: indigo;
+}
+
+.min {
+  min-height: 10rem;
+}
+
+.profileIcon {
+  max-width: 35px;
+}
+
+.menuIcon {
+  min-width: 0px;
+
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    min-width: 35px;
+  }
+}
+
+.tweetBtn {
+  border-radius: 1.5em;
+  min-height: 2rem;
+}
+
+.roundBtn {
+  border-radius: 1.5em;
+}
+
+#tweetArea {
+  background-color: $body-bg;
+  font-size: 1.5em;
+  resize: none;
+}
+
+.line {
+  height: 10px;
+  background-color: $body-bg-darker;
+}
+
+#search {
+  background-color: $body-bg-darker;
+  border-radius: 0 1.5em 1.5em 0;
+}
+
+.searchPrepend {
+  background-color: $body-bg-darker;
+  border-radius: 1.5em;
+}
+
+.trending {
+  background-color: $body-bg-darker;
+}
